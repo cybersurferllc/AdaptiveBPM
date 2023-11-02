@@ -1,0 +1,16 @@
+{
+    "name": "adaptivebpm",
+    "rootNamespace": "",
+    "references": [
+        "GUID:32d75199cc69a4e69911099651d8ebc3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
