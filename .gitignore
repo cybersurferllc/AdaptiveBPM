@@ -22,7 +22,7 @@
 /AdaptiveBPMUnity/.vs/   # Ignore .vs/ directory in Unity project
 /AdaptiveBPMUnity/*.csproj
 /AdaptiveBPMUnity/*.unityproj
-/AdaptiveBPMUnity/*.sln
+#/AdaptiveBPMUnity/*.sln
 /AdaptiveBPMUnity/*.suo
 /AdaptiveBPMUnity/*.tmp
 /AdaptiveBPMUnity/*.user
