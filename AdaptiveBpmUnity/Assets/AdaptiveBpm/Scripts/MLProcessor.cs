@@ -6,6 +6,7 @@ namespace AdaptiveBpm
     public class MLProcessor
     {
         private AdaptiveBpmMLModel model;
+        private bool canWriteToFile;
 
         public bool PredictWithSampleInput()
         {
@@ -23,6 +24,11 @@ namespace AdaptiveBpm
 
         public void AddSampleDataToDatasheet()
         {
+            if (!canWriteToFile)
+            {
+                return;
+            }
+
             // Sample data to add to the dataset
             var sampleData = new List<AdaptiveBpmMLTrainingModel.ModelInput>
             {
