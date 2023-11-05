@@ -45,7 +45,7 @@ The Unity project that writes data to the data file and uses the new model for t
 
 ## Getting Started
 - Ensure you have a WebSocket token from Hyperate and plug it into the `hyperateSocket` component.
-- Attach the `AdaptiveIntensity` script to a GameObject. This object will handle the intensity adjustments.
+- Attach the `AdaptiveBPM` script to a GameObject. This object will handle the intensity adjustments.
 - Attach the `hyperateSocket` script to a separate GameObject and reference the `AdaptiveBPM` object.
 - Configure parameters like max/min BPM, history length, etc., according to your requirements.
 - Run the simulation or game. Heart rate updates will be received from Hyperate, and intensity adjustments will be made accordingly.
