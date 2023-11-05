@@ -27,7 +27,6 @@ namespace AdaptiveBpmML
 
             [ColumnName(@"Label")]
             public bool Label { get; set; }
-
         }
 
         #endregion
@@ -46,7 +45,7 @@ namespace AdaptiveBpmML
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("B:\\dev\\bpm\\AdaptiveBPM\\AdaptiveBpmML\\models\\model.zip");
+        private static string MLNetModelPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\models\\model.zip");
 
         /// <summary>
         /// Use this method to predict on <see cref="ModelInput"/>.

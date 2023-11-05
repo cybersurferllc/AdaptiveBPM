@@ -11,13 +11,15 @@ namespace AdaptiveBpmML
         {
             mlContext = new MLContext();
 
-            // Model (.zip)
-            string modelName = "model.zip";
-            string modelPath = "B:\\dev\\bpm\\AdaptiveBPM\\AdaptiveBpmML\\models\\" + modelName;
+            // Go back three levels to reach the root of the solution
+            string upDirectory = "..\\..\\..";
 
-            // Data (.csv)
-            string dataName = "test.csv";
-            string dataPath = "B:\\dev\\bpm\\AdaptiveBPM\\AdaptiveBpmML\\data\\" + dataName;
+            // Construct full paths
+            string modelPath = Path.Combine(upDirectory, "models", "model.zip");
+            string dataPath = Path.Combine(upDirectory, "data", "test.csv");
+
+            Console.WriteLine("Full Model Path: " + modelPath);
+            Console.WriteLine("Full Data Path: " + dataPath);
 
             var data = mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(dataPath, separatorChar: ',');
 
