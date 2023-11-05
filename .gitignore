@@ -51,8 +51,6 @@
 /AdaptiveBPMML/.vsconfig
 
 # Ignore any Unity-generated project-specific files in the root directory
-*.csproj
-*.sln
 *.user
 
 # Ignore the .vs/ directory in the root folder

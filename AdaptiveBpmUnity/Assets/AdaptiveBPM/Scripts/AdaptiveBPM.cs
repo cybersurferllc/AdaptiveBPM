@@ -16,7 +16,8 @@ namespace AdaptiveBpm
         [SerializeField] private GeneratorType generatorType;
         [SerializeField] private AdaptiveBPMGenerator adaptiveBPMGenerator;
         [SerializeField] private FakeBPMGenerator fakeBPMGenerator;
-        //private MLProcessor mlProcessor;
+
+        private MLProcessor mlProcessor;
 
         private float currentBpm;
         private float averageBPM;
@@ -76,8 +77,8 @@ namespace AdaptiveBpm
 
         private void Start()
         {
-            //mlProcessor = new MLProcessor();
-            //mlProcessor.AddSampleDataToDatasheet();
+            mlProcessor = new MLProcessor();
+            mlProcessor.AddSampleDataToDatasheet();
 
             _historyLength = historyLength;
             bpmHistory = new Queue<float>(historyLength);
