@@ -9,7 +9,7 @@ The system comprises two primary components:
 This component is responsible for:
 - Establishing a WebSocket connection to Hyperate's servers.
 - Receiving real-time heart rate updates from Hyperate.
-- Updating our Intensity Manager (`AdaptiveIntensity`) with the received BPM data.
+- Updating our Intensity Manager (`AdaptiveBPM`) with the received BPM data.
 
 **Key Features**:
 - **WebSocket Token**: Before using the system, you must obtain a token from Hyperate. [Get it here](https://www.hyperate.io/api).
