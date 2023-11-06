@@ -20,7 +20,7 @@
 /AdaptiveBPMUnity/ExportedObj/
 /AdaptiveBPMUnity/.consulo/
 /AdaptiveBPMUnity/.vs/   # Ignore .vs/ directory in Unity project
-/AdaptiveBPMUnity/*.csproj
+#/AdaptiveBPMUnity/*.csproj
 /AdaptiveBPMUnity/*.unityproj
 #/AdaptiveBPMUnity/*.sln
 /AdaptiveBPMUnity/*.suo

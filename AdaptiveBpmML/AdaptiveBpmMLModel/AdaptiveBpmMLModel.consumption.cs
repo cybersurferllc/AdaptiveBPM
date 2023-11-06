@@ -73,7 +73,10 @@ namespace AdaptiveBpmML
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("..\\AdaptiveBPM\\AdaptiveBpmML\\models\\model.zip");
+        private static string MLNetModelPath = Path.GetFullPath(@"..\AdaptiveBPM\AdaptiveBpmML\models\model.zip");
+
+        private static string UnityModelPath =
+            Path.GetFullPath(@"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpmML\models\model.zip");
 
         /// <summary>
         /// Use this method to predict on <see cref="ModelInput"/>.
@@ -90,7 +93,7 @@ namespace AdaptiveBpmML
         {
             var mlContext = new MLContext();
 
-            using (var stream = new FileStream(MLNetModelPath, FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream(UnityModelPath, FileMode.Open, FileAccess.Read))
             {
                 ITransformer mlModel = mlContext.Model.Load(stream, out var schema);
                 var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);

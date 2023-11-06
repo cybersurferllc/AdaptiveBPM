@@ -8,8 +8,8 @@ namespace AdaptiveBpmML
 {
     public class AdaptiveBpmMLModel
     {
-        private static string MLNetDataPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\data\\data.csv");
-        private static string UnityDataPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\data\\data.csv");
+        private static string MLNetDataPath = Path.GetFullPath(@"..\..\AdaptiveBPM\AdaptiveBpmML\data\data.csv");
+        private static string UnityDataPath = Path.GetFullPath(@".\Assets\AdaptiveBpmML\data\data.csv");
 
         public bool PredictBPM(AdaptiveBpmMLTrainingModel.ModelInput input)
         {
@@ -27,7 +27,7 @@ namespace AdaptiveBpmML
                 HasHeaderRecord = false,
             };
 
-            using (var writer = new StreamWriter(MLNetDataPath, true))
+            using (var writer = new StreamWriter(UnityDataPath, true))
                 using (var csv = new CsvWriter(writer, config)){
                     for (int i = 0; i < 10; i++){
                         csv.WriteRecords(data);

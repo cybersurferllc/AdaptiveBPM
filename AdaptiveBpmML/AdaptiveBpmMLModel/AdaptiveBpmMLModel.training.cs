@@ -5,13 +5,6 @@ namespace AdaptiveBpmML
 {
     public partial class AdaptiveBpmMLTrainingModel
     {
-        public static ITransformer RetrainPipeline(MLContext context, IDataView trainData)
-        {
-            var pipeline = BuildPipeline(context);
-            var model = pipeline.Fit(trainData);
-            return model;
-        }
-
         /// <summary>
         /// build the pipeline that is used from model builder. Use this function to retrain model.
         /// </summary>

@@ -8,6 +8,11 @@ namespace AdaptiveBpm
         private AdaptiveBpmMLModel model;
         private bool canWriteToFile;
 
+        public MLProcessor(bool writeToFile)
+        {
+            canWriteToFile = writeToFile;
+        }
+
         public bool PredictWithSampleInput()
         {
             var sampleInput = new AdaptiveBpmMLTrainingModel.ModelInput
@@ -16,7 +21,6 @@ namespace AdaptiveBpm
                 BPM = 90,
                 TargetBPM = 110F, // Set your desired BPM here
             };
-
 
             model = new AdaptiveBpmMLModel();
             return model.PredictBPM(sampleInput);

@@ -7,12 +7,13 @@ namespace AdaptiveBpmML
         private MLContext mlContext;
         private ITransformer loadedModel;
         string mlDirectory = @"..\..\..";
+        string unityDirectory = @"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpmML";
 
         public (IDataView data, IDataView testData) GetDataViews()
         {
             // Construct full paths
-            string dataPath = Path.Combine(mlDirectory, "data", "data.csv");
-            string testDataPath = Path.Combine(mlDirectory, "data", "test.csv");
+            string dataPath = Path.Combine(unityDirectory, "data", "data.csv");
+            string testDataPath = Path.Combine(unityDirectory, "data", "test.csv");
 
             var data = mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(dataPath,
                 separatorChar: ',');
@@ -42,7 +43,7 @@ namespace AdaptiveBpmML
 
         public void SaveModel(ITransformer model, DataViewSchema schema)
         {
-            string modelPath = Path.Combine(mlDirectory, "models", "model.zip");
+            string modelPath = Path.Combine(unityDirectory, "models", "model.zip");
 
             mlContext.Model.Save(model, schema, modelPath);
             Console.WriteLine("Save Model to " + modelPath);
@@ -62,7 +63,6 @@ namespace AdaptiveBpmML
             var prediction = AdaptiveBpmMLTrainingModel.Predict(input);
 
             return prediction.Prediction;
-
         }
     }
 }

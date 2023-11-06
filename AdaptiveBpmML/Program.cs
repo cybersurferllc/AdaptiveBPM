@@ -7,4 +7,5 @@ void RunModel()
 {
     AdaptiveBpmMLModel mlModel = new AdaptiveBpmMLModel();
     mlModel.LoadModel();
+    mlModel.Predict();
 }

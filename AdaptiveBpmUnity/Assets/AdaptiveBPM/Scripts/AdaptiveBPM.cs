@@ -18,6 +18,7 @@ namespace AdaptiveBpm
         [SerializeField] private FakeBPMGenerator fakeBPMGenerator;
 
         private MLProcessor mlProcessor;
+        [SerializeField] private bool writeToFile;
 
         private float currentBpm;
         private float averageBPM;
@@ -77,8 +78,10 @@ namespace AdaptiveBpm
 
         private void Start()
         {
-            mlProcessor = new MLProcessor();
+            mlProcessor = new MLProcessor(writeToFile);
+            Debug.Log(mlProcessor.PredictWithSampleInput());
             mlProcessor.AddSampleDataToDatasheet();
+            Debug.Log("Write data to file");
 
             _historyLength = historyLength;
             bpmHistory = new Queue<float>(historyLength);
