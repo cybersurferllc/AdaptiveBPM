@@ -62,8 +62,7 @@ namespace AdaptiveBpmML
         public static IEstimator<ITransformer> BuildPipelineWithOneVersusAll(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms
-                .Concatenate("Features", "Intensity", "BPM", "TargetBPM", "BPMDifference")
+            var pipeline = mlContext.Transforms.Concatenate("Features", "Intensity", "BPM", "TargetBPM", "BPMDifference")
                 .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext
                     .BinaryClassification.Trainers
                     .FastTree(labelColumnName: "Label", numberOfLeaves: 4, numberOfTrees: 4)));

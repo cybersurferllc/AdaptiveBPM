@@ -30,11 +30,11 @@ namespace AdaptiveBpm
             }
 
             // Sample data to add to the dataset
-            var sampleData = new List<AdaptiveBpmMLTrainingModel.ModelInput>
+            var sampleData = new List<AdaptiveBpmMLTrainingModel.ModelSerialized>
             {
-                new AdaptiveBpmMLTrainingModel.ModelInput { Intensity = 1, BPM = 99, TargetBPM = 110, BPMDifference = 10, Label = true },
-                new AdaptiveBpmMLTrainingModel.ModelInput { Intensity = 2, BPM = 120, TargetBPM = 130, BPMDifference = 10, Label = true },
-                new AdaptiveBpmMLTrainingModel.ModelInput { Intensity = 3, BPM = 130, TargetBPM = 120, BPMDifference = -10, Label = false },
+                new AdaptiveBpmMLTrainingModel.ModelSerialized { Intensity = 1, BPM = 99, TargetBPM = 110, BPMDifference = 10, Label = 1 },
+                new AdaptiveBpmMLTrainingModel.ModelSerialized { Intensity = 2, BPM = 120, TargetBPM = 130, BPMDifference = 10, Label = 1 },
+                new AdaptiveBpmMLTrainingModel.ModelSerialized { Intensity = 3, BPM = 130, TargetBPM = 120, BPMDifference = -10, Label = 0 },
                 // Add more data as needed
             };
 

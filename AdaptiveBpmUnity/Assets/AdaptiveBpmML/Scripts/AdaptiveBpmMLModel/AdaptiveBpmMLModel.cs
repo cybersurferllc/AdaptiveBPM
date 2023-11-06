@@ -8,7 +8,8 @@ namespace AdaptiveBpmML
 {
     public class AdaptiveBpmMLModel
     {
-        private static string MLNetDataPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\data\\test.csv");
+        private static string MLNetDataPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\data\\data.csv");
+        private static string UnityDataPath = Path.GetFullPath("..\\..\\AdaptiveBPM\\AdaptiveBpmML\\data\\data.csv");
 
         public bool PredictBPM(AdaptiveBpmMLTrainingModel.ModelInput input)
         {
@@ -19,7 +20,7 @@ namespace AdaptiveBpmML
             return prediction.Prediction;
         }
 
-        public void AppendDataToCSV(List<AdaptiveBpmMLTrainingModel.ModelInput> data)
+        public void AppendDataToCSV(List<AdaptiveBpmMLTrainingModel.ModelSerialized> data)
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {

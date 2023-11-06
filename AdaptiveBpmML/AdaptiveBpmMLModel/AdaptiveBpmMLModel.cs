@@ -6,30 +6,46 @@ namespace AdaptiveBpmML
     {
         private MLContext mlContext;
         private ITransformer loadedModel;
+        string mlDirectory = @"..\..\..";
+
+        public (IDataView data, IDataView testData) GetDataViews()
+        {
+            // Construct full paths
+            string dataPath = Path.Combine(mlDirectory, "data", "data.csv");
+            string testDataPath = Path.Combine(mlDirectory, "data", "test.csv");
+
+            var data = mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(dataPath,
+                separatorChar: ',');
+            var testData =
+                mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(testDataPath,
+                    separatorChar: ',');
+
+            return (data, testData);
+        }
+
 
         public void LoadModel()
         {
             mlContext = new MLContext();
 
-            // Go back three levels to reach the root of the solution
-            string upDirectory = "..\\..\\..";
-
-            // Construct full paths
-            string modelPath = Path.Combine(upDirectory, "models", "model.zip");
-            string dataPath = Path.Combine(upDirectory, "data", "test.csv");
-
-            Console.WriteLine("Full Model Path: " + modelPath);
-            Console.WriteLine("Full Data Path: " + dataPath);
-
-            var data = mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(dataPath, separatorChar: ',');
+            var dataViews = GetDataViews();
 
             var pipeline = AdaptiveBpmMLTrainingModel.BuildPipeline(mlContext);
+            loadedModel = pipeline.Fit(dataViews.data);
 
-            loadedModel = pipeline.Fit(data);
-            var predictions = loadedModel.Transform(data);
+            var predictions = loadedModel.Transform(dataViews.testData);
             var metrics = mlContext.BinaryClassification.Evaluate(data: predictions, labelColumnName: @"Label");
+            Console.WriteLine("Model Prediction Accuracy: " + metrics.Accuracy);
 
-            mlContext.Model.Save(loadedModel, data.Schema, modelPath);
+            SaveModel(loadedModel, dataViews.data.Schema);
+        }
+
+        public void SaveModel(ITransformer model, DataViewSchema schema)
+        {
+            string modelPath = Path.Combine(mlDirectory, "models", "model.zip");
+
+            mlContext.Model.Save(model, schema, modelPath);
+            Console.WriteLine("Save Model to " + modelPath);
         }
 
         public bool Predict()
@@ -46,7 +62,7 @@ namespace AdaptiveBpmML
             var prediction = AdaptiveBpmMLTrainingModel.Predict(input);
 
             return prediction.Prediction;
+
         }
     }
-
 }
