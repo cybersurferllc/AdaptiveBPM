@@ -1,0 +1,23 @@
+﻿# Default Unity ignore
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# Other common ignores
+*.sln
+*.csproj
+*.unityproj
+*.swp
+*.swo
+*.user
+*.userprefs

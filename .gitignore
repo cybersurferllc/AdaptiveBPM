@@ -58,3 +58,4 @@
 
 # Ignore the vsconfig.json file in the root folder
 .vsconfig
+.idea/
