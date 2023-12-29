@@ -1,42 +1,31 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adaptivebpm", "adaptivebpm.csproj", "{929E6C68-C00D-8A1A-C82C-E9A7D0E8C281}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adaptivebpm", "adaptivebpm.csproj", "{686c9e92-0dc0-1a8a-c82c-e9a7d0e8c281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "debuggui", "debuggui.csproj", "{09BDF0AB-81D7-80D8-68E2-331163860730}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "debuggui", "debuggui.csproj", "{abf0bd09-d781-d880-68e2-331163860730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adaptivebpmML", "adaptivebpmML.csproj", "{8C857C4E-EDDA-F938-EBC7-0E1B77D94249}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "endel.nativewebsocket", "endel.nativewebsocket.csproj", "{d3a4cf52-8e2d-c855-db7b-0bc052e26288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "endel.nativewebsocket", "endel.nativewebsocket.csproj", "{52CFA4D3-2D8E-55C8-DB7B-0BC052E26288}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{39f23090-07b0-45db-d51d-a2ea2c4525c7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptiveBpmMLService", "..\AdaptiveBpmML\AdaptiveBpmMLService.csproj", "{06A6B2DD-3C34-4825-85D0-F164793AEE59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{2f915fd2-b435-091f-0814-6f8d1ca1112c}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{929E6C68-C00D-8A1A-C82C-E9A7D0E8C281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{929E6C68-C00D-8A1A-C82C-E9A7D0E8C281}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{929E6C68-C00D-8A1A-C82C-E9A7D0E8C281}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{929E6C68-C00D-8A1A-C82C-E9A7D0E8C281}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09BDF0AB-81D7-80D8-68E2-331163860730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09BDF0AB-81D7-80D8-68E2-331163860730}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09BDF0AB-81D7-80D8-68E2-331163860730}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09BDF0AB-81D7-80D8-68E2-331163860730}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C857C4E-EDDA-F938-EBC7-0E1B77D94249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C857C4E-EDDA-F938-EBC7-0E1B77D94249}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C857C4E-EDDA-F938-EBC7-0E1B77D94249}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C857C4E-EDDA-F938-EBC7-0E1B77D94249}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52CFA4D3-2D8E-55C8-DB7B-0BC052E26288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52CFA4D3-2D8E-55C8-DB7B-0BC052E26288}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52CFA4D3-2D8E-55C8-DB7B-0BC052E26288}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52CFA4D3-2D8E-55C8-DB7B-0BC052E26288}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06A6B2DD-3C34-4825-85D0-F164793AEE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06A6B2DD-3C34-4825-85D0-F164793AEE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06A6B2DD-3C34-4825-85D0-F164793AEE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06A6B2DD-3C34-4825-85D0-F164793AEE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686c9e92-0dc0-1a8a-c82c-e9a7d0e8c281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686c9e92-0dc0-1a8a-c82c-e9a7d0e8c281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{abf0bd09-d781-d880-68e2-331163860730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{abf0bd09-d781-d880-68e2-331163860730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d3a4cf52-8e2d-c855-db7b-0bc052e26288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d3a4cf52-8e2d-c855-db7b-0bc052e26288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39f23090-07b0-45db-d51d-a2ea2c4525c7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39f23090-07b0-45db-d51d-a2ea2c4525c7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2f915fd2-b435-091f-0814-6f8d1ca1112c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2f915fd2-b435-091f-0814-6f8d1ca1112c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -76,7 +76,7 @@ namespace AdaptiveBpmML
         private static string MLNetModelPath = Path.GetFullPath(@"..\AdaptiveBPM\AdaptiveBpmML\models\model.zip");
 
         private static string UnityModelPath =
-            Path.GetFullPath(@"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpmML\models\model.zip");
+            Path.GetFullPath(@"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpm\Model\models\model.zip");
 
         /// <summary>
         /// Use this method to predict on <see cref="ModelInput"/>.

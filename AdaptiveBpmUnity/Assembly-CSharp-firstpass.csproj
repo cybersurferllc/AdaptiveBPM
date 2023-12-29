@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4e7c858c-daed-38f9-ebc7-0e1b77d94249}</ProjectGuid>
+    <ProjectGuid>{2f915fd2-b435-091f-0814-6f8d1ca1112c}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>adaptivebpmML</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,9 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <None Include="Assets\ML.NET\adaptivebpmML.asmdef" />
-     <Folder Include="Assets\ML.NET\Plugins" />
-     <Folder Include="Assets\ML.NET" />
+     <None Include="Assets\Plugins\ML.NET\link.xml.txt" />
+     <Folder Include="Assets\Plugins" />
+     <Folder Include="Assets\Plugins\csv" />
+     <Folder Include="Assets\Plugins\ML.NET" />
+     <None Include="Assets\Plugins\csv\CsvHelper.xml" />
      <Reference Include="UnityEngine">
      <HintPath>B:\applications\2022.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

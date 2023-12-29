@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4e7c858c-daed-38f9-ebc7-0e1b77d94249}</ProjectGuid>
+    <ProjectGuid>{39f23090-07b0-45db-d51d-a2ea2c4525c7}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>adaptivebpmML</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,9 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <None Include="Assets\ML.NET\adaptivebpmML.asmdef" />
-     <Folder Include="Assets\ML.NET\Plugins" />
-     <Folder Include="Assets\ML.NET" />
+     <Folder Include="Assets" />
+     <Folder Include="Assets\HypeRate" />
      <Reference Include="UnityEngine">
      <HintPath>B:\applications\2022.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

@@ -8,8 +8,8 @@ namespace AdaptiveBpmML
 {
     public class AdaptiveBpmMLModel
     {
-        private static string MLNetDataPath = Path.GetFullPath(@"..\..\AdaptiveBPM\AdaptiveBpmML\data\data.csv");
-        private static string UnityDataPath = Path.GetFullPath(@".\Assets\AdaptiveBpmML\data\data.csv");
+        private static string MLNetDataPath = Path.GetFullPath(@"..\..\AdaptiveBPM\AdaptiveBpm\Model\data\data.csv");
+        private static string UnityDataPath = Path.GetFullPath(@".\Assets\AdaptiveBpm\Model\data\data.csv");
 
         public bool PredictBPM(AdaptiveBpmMLTrainingModel.ModelInput input)
         {

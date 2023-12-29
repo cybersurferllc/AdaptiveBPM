@@ -7,13 +7,13 @@ namespace AdaptiveBpmML
         private MLContext mlContext;
         private ITransformer loadedModel;
         string mlDirectory = @"..\..\..";
-        string unityDirectory = @"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpmML";
+        string unityDirectory = @"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpm\Model";
 
         public (IDataView data, IDataView testData) GetDataViews()
         {
             // Construct full paths
-            string dataPath = Path.Combine(unityDirectory, "data", "data.csv");
-            string testDataPath = Path.Combine(unityDirectory, "data", "test.csv");
+            string dataPath = Path.Combine(unityDirectory, "Data", "data.csv");
+            string testDataPath = Path.Combine(unityDirectory, "Data", "test.csv");
 
             var data = mlContext.Data.LoadFromTextFile<AdaptiveBpmMLTrainingModel.ModelInput>(dataPath,
                 separatorChar: ',');
