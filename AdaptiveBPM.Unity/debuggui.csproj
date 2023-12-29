@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{abf0bd09-d781-d880-68e2-331163860730}</ProjectGuid>
+    <ProjectGuid>{f8121b81-2215-1358-0741-6d06be6206e4}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -313,85 +313,85 @@
      <HintPath>B:\applications\2022.3.0f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Core">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Core.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.KMeansClustering">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.KMeansClustering.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.KMeansClustering.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.ResultProcessor">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.ResultProcessor.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.ResultProcessor.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Maml">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Maml.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Maml.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Transforms">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Transforms.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Transforms.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.PCA">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.PCA.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.PCA.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Ensemble">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Ensemble.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Ensemble.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Sweeper">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Sweeper.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Sweeper.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="System.Collections.Immutable">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\System.Collections.Immutable.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\System.Collections.Immutable.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="CsvHelper">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\csv\CsvHelper.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\csv\CsvHelper.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.SamplesUtils">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.SamplesUtils.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.SamplesUtils.dll</HintPath>
      </Reference>
      <Reference Include="System.Runtime.CompilerServices.Unsafe">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.Data">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.Data.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.Data.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.FastTree">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.FastTree.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.FastTree.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.StandardLearners">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.StandardLearners.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.StandardLearners.dll</HintPath>
      </Reference>
      <Reference Include="Microsoft.ML.CpuMath">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Assets\Plugins\ML.NET\Microsoft.ML.CpuMath.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Assets\Plugins\ML.NET\Microsoft.ML.CpuMath.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>B:\applications\2022.3.0f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -769,10 +769,10 @@
      <HintPath>B:\applications\2022.3.0f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpmUnity\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>B:\dev\bpm\AdaptiveBPM\AdaptiveBpm.Unity\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
