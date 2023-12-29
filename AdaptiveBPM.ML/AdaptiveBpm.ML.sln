@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptiveBpmMLService", "AdaptiveBpmMLService.csproj", "{CF5309BE-BFB4-4E15-A06E-AFA10FAC1D78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptiveBpm.ML", "AdaptiveBpm.ML.csproj", "{CF5309BE-BFB4-4E15-A06E-AFA10FAC1D78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,19 @@
+﻿# Default .NET ignore
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.nupkg
+*.pdb
+*.cache
+*.csproj.user
+
+# ML.NET specific
+*.mbconfig
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/

@@ -35,12 +35,10 @@ void RunModel()
 {
     // Create a reference to the model
     AdaptiveBpmMLModel mlModel = new AdaptiveBpmMLModel();
-    // transfrom and classify the data
+    // transfrom and classify the data, save the model
     mlModel.LoadModel();
     // make a prediction
     mlModel.Predict();
-    // save the model
-    mlModel.SaveModel();
 }
 ```
 
