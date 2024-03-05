@@ -1,4 +1,5 @@
-﻿using Microsoft.ML;
+﻿using AdaptiveBpm.ML.DataCollection;
+using Microsoft.ML;
 
 namespace AdaptiveBpmML
 {
@@ -6,11 +7,11 @@ namespace AdaptiveBpmML
     {
         private MLContext mlContext;
         private ITransformer loadedModel;
-        string mlDirectory = @"..\..\..";
-        string unityDirectory = @"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpm\Model";
 
         public (IDataView data, IDataView testData) GetDataViews()
         {
+            var unityDirectory = ReadDataDirectories.UnityDirectory;
+            
             // Construct full paths
             string dataPath = Path.Combine(unityDirectory, "Data", "data.csv");
             string testDataPath = Path.Combine(unityDirectory, "Data", "test.csv");
@@ -43,7 +44,7 @@ namespace AdaptiveBpmML
 
         public void SaveModel(ITransformer model, DataViewSchema schema)
         {
-            string modelPath = Path.Combine(unityDirectory, "models", "model.zip");
+            string modelPath = Path.Combine(ReadDataDirectories.UnityDirectory, "models", "model.zip");
 
             mlContext.Model.Save(model, schema, modelPath);
             Console.WriteLine("Save Model to " + modelPath);

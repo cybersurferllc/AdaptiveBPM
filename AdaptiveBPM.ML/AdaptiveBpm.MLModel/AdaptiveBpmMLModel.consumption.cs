@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using AdaptiveBpm.ML.DataCollection;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 namespace AdaptiveBpmML
@@ -73,10 +74,8 @@ namespace AdaptiveBpmML
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath(@"..\AdaptiveBPM\AdaptiveBpmML\models\model.zip");
-
         private static string UnityModelPath =
-            Path.GetFullPath(@"..\..\..\..\AdaptiveBpmUnity\Assets\AdaptiveBpm\Model\models\model.zip");
+            Path.Combine(ReadDataDirectories.UnityDirectory, @"models\\model.zip");
 
         /// <summary>
         /// Use this method to predict on <see cref="ModelInput"/>.

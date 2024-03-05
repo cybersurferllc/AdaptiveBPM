@@ -17,3 +17,7 @@ obj/
 
 # JetBrains Rider
 .idea/
+
+# master data
+data/master
+model/master
