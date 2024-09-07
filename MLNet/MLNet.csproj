@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="33.0.1" />
+      <PackageReference Include="Microsoft.ML" Version="4.0.0-preview.24271.1" />
+      <PackageReference Include="Microsoft.ML.CpuMath" Version="4.0.0-preview.24271.1" />
+      <PackageReference Include="Microsoft.ML.FastTree" Version="4.0.0-preview.24271.1" />
+      <PackageReference Include="Microsoft.ML.LightGbm" Version="4.0.0-preview.24271.1" />
+      <PackageReference Include="System.Collections.Immutable" Version="9.0.0-preview.6.24327.7" />
+    </ItemGroup>
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="xcopy &quot;$(ProjectDir)data\&quot; &quot;$(OutDir)data\&quot; /E /I /Y" />
+    </Target>
+</Project>

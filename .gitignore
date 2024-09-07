@@ -59,3 +59,39 @@
 # Ignore the vsconfig.json file in the root folder
 .vsconfig
 .idea/
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# Ignore NuGet Packages
+*.nupkg
+packages/
+
+# Ignore .NET Core project and global settings
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.rsuser
+
+# Ignore Rider-specific files
+.idea/
+*.sln.iml
+
+# Ignore .NET runtime-specific files
+.DS_Store
+*.log
+
+# ignore master data
+MLNet/data/
