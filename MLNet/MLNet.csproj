@@ -15,7 +15,12 @@
       <PackageReference Include="Microsoft.ML.LightGbm" Version="4.0.0-preview.24271.1" />
       <PackageReference Include="System.Collections.Immutable" Version="9.0.0-preview.6.24327.7" />
     </ItemGroup>
+    <PropertyGroup>
+        <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
+        <IsOSX Condition="'$(OS)' == 'Unix' AND Exists('/Applications')">true</IsOSX>
+    </PropertyGroup>
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="xcopy &quot;$(ProjectDir)data\&quot; &quot;$(OutDir)data\&quot; /E /I /Y" />
+        <Exec Command="xcopy &quot;$(ProjectDir)data\&quot; &quot;$(OutDir)data\&quot; /E /I /Y" Condition="'$(IsWindows)'=='true'" />
+        <Exec Command="cp -R &quot;$(ProjectDir)data/&quot; &quot;$(OutDir)data/&quot;" Condition="'$(IsOSX)'=='true'" />
     </Target>
 </Project>

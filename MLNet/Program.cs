@@ -1,8 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using Microsoft.ML;
 using MLNet;
@@ -64,7 +60,8 @@ var heartRateData = new List<HeartRateData>()
 };
 
 foreach (var record in heartRateData){
-    Console.WriteLine($"Predicted Intensity: {predictionEngine.Predict(record).Intensity}");
+    var predictedIntensity = predictionEngine.Predict(record).Intensity;
+    Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
 }
 
 var transformer = MLExtensions.GetMLContext(ref context, modelFileName);
