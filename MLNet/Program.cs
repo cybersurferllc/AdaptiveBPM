@@ -20,6 +20,12 @@ var testData = CSV.ReadCSVFiles<HeartRateData>().ToList();
 var playtestData = CSV.ReadCSVFiles<HeartRateData>("master").ToList();
 testData.AddRange(playtestData);
 
+var maxBpm = testData.Max(x => x.Bpm);
+var minBpm = testData.Min(x => x.Bpm);
+//var maxIntensity = testData.Max(x => x.Intensity);
+var maxIntensity = 10;
+var minIntensity = testData.Min(x => x.Intensity);
+
 Console.WriteLine($"Data count: {testData.Count}");
 
 // Transform data to DataView
@@ -48,6 +54,7 @@ var prediction = predictionEngine.Predict(new HeartRateData { Bpm = 140, Time = 
 
 Console.WriteLine($"Predicted Intensity: {prediction.Intensity}");
 
+
 var heartRateData = new List<HeartRateData>()
 {
     // random heart rate data
@@ -59,10 +66,16 @@ var heartRateData = new List<HeartRateData>()
     new HeartRateData { Bpm = 120, Time = new TimeSpan(0, 0, 0, 5) },
 };
 
-foreach (var record in heartRateData){
-    var predictedIntensity = predictionEngine.Predict(record).Intensity;
-    Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
+GamePrediction gamePrediction = new GamePrediction(minBpm, maxBpm, minIntensity, maxIntensity);
+foreach (var record in heartRateData)
+{
+    gamePrediction.PredictGameDifficulty(predictionEngine, record);
 }
+//
+// foreach (var record in heartRateData){
+//     var predictedIntensity = predictionEngine.Predict(record).Intensity;
+//     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
+// }
 
 var transformer = MLExtensions.GetMLContext(ref context, modelFileName);
 if (transformer != null){
@@ -72,3 +85,4 @@ var predictionEngine2 = MLExtensions.Predict(context, transformer, new HeartRate
 Console.WriteLine($"Predicted Intensity: {predictionEngine2}");
 
 Console.ReadLine();
+
