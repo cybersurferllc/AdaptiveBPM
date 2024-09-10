@@ -34,7 +34,7 @@ public class GamePrediction
         float scaledDifficulty = _minDifficulty + invertedIntensity * (_maxDifficulty - _minDifficulty);
 
         // Adjust difficulty based on normalized BPM
-        float finalDifficulty = scaledDifficulty * (1 - normalizedBpm); // Modify this formula based on your needs
+        float finalDifficulty = _minDifficulty + (scaledDifficulty * (1 - normalizedBpm) * (_maxDifficulty - _minDifficulty));
 
         // Output the predicted intensity and game difficulty
         Console.WriteLine($"BPM: {newData.Bpm}");

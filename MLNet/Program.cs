@@ -45,16 +45,16 @@ var metrics = context.Regression.Evaluate(predictions, labelColumnName: labelCol
 // write model to zip
 context.Model.Save(model, gameDataView.Schema, modelFileName);
 
+// Model metrics
 Console.WriteLine($"R^2: {metrics.RSquared}");
 Console.WriteLine($"RMS: {metrics.RootMeanSquaredError}");
 
 // Predict
 var predictionEngine = context.Model.CreatePredictionEngine<HeartRateData, HeartRatePrediction>(model);
 var prediction = predictionEngine.Predict(new HeartRateData { Bpm = 140, Time = new TimeSpan(0,0,1,30)});
-
 Console.WriteLine($"Predicted Intensity: {prediction.Intensity}");
 
-
+// Random Heart rate data
 var heartRateData = new List<HeartRateData>()
 {
     // random heart rate data
@@ -66,6 +66,7 @@ var heartRateData = new List<HeartRateData>()
     new HeartRateData { Bpm = 120, Time = new TimeSpan(0, 0, 0, 5) },
 };
 
+// Game Prediction
 GamePrediction gamePrediction = new GamePrediction(minBpm, maxBpm, minIntensity, maxIntensity);
 foreach (var record in heartRateData)
 {
@@ -77,12 +78,22 @@ foreach (var record in heartRateData)
 //     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
 // }
 
+// Load model from zip
 var transformer = MLExtensions.GetMLContext(ref context, modelFileName);
 if (transformer != null){
     Console.WriteLine("Model loaded successfully");
 }
+
+// Predict with loaded model from extension method
 var predictionEngine2 = MLExtensions.Predict(context, transformer, new HeartRateData(){Bpm = 120, Time = new TimeSpan(0,0,1,30)});
 Console.WriteLine($"Predicted Intensity: {predictionEngine2}");
 
-Console.ReadLine();
+// test prediction with input
+string input = null;
+do{
+    input = Console.ReadLine();
+    var bpm = float.Parse(input);
+    var time = new TimeSpan(0,0,1,30);
+    gamePrediction.PredictGameDifficulty(predictionEngine, new HeartRateData() { Bpm = bpm, Time = time });
+} while (input != "exit");
 
