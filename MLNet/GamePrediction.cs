@@ -24,17 +24,23 @@ public class GamePrediction
         // Predict intensity using the model
         float predictedIntensity = predictionEngine.Predict(newData).Intensity;
 
+        // Normalize the predicted intensity to a 0-1 scale
+        float normalizedIntensity = (predictedIntensity - _minDifficulty) / (_maxDifficulty - _minDifficulty);
+
         // Normalize the BPM to a 0-1 scale based on min and max BPM
         float normalizedBpm = (newData.Bpm - _minBpm) / (_maxBpm - _minBpm);
 
-        // Invert the predicted intensity so that lower intensity gives higher difficulty
-        float invertedIntensity = 1 - predictedIntensity;
+        // Invert the normalized intensity so that lower intensity gives higher difficulty
+        float invertedIntensity = 1 - normalizedIntensity;
 
         // Scale the inverted intensity to the game's difficulty range
         float scaledDifficulty = _minDifficulty + invertedIntensity * (_maxDifficulty - _minDifficulty);
 
         // Adjust difficulty based on normalized BPM
-        float finalDifficulty = _minDifficulty + (scaledDifficulty * (1 - normalizedBpm) * (_maxDifficulty - _minDifficulty));
+        float finalDifficulty = scaledDifficulty * (1 - normalizedBpm);
+
+        // Ensure final difficulty is within the range
+        finalDifficulty = Math.Max(_minDifficulty, Math.Min(finalDifficulty, _maxDifficulty));
 
         // Output the predicted intensity and game difficulty
         Console.WriteLine($"BPM: {newData.Bpm}");

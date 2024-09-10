@@ -23,7 +23,7 @@ testData.AddRange(playtestData);
 var maxBpm = testData.Max(x => x.Bpm);
 var minBpm = testData.Min(x => x.Bpm);
 //var maxIntensity = testData.Max(x => x.Intensity);
-var maxIntensity = 10;
+var maxIntensity = 100;
 var minIntensity = testData.Min(x => x.Intensity);
 
 Console.WriteLine($"Data count: {testData.Count}");
