@@ -8,10 +8,17 @@ public class GamePrediction
     private readonly float _maxBpm;
     private readonly float _minDifficulty;
     private readonly float _maxDifficulty;
+    private readonly PredictionEngine<HeartRateData, HeartRatePrediction>? _predictionEngine;
 
     // Constructor to initialize BPM and difficulty ranges
-    public GamePrediction(float minBpm, float maxBpm, float minDifficulty, float maxDifficulty)
+    public GamePrediction(
+        PredictionEngine<HeartRateData, HeartRatePrediction>? predictionEngine,
+        float minBpm,
+        float maxBpm,
+        float minDifficulty,
+        float maxDifficulty)
     {
+        _predictionEngine = predictionEngine;
         _minBpm = minBpm;
         _maxBpm = maxBpm;
         _minDifficulty = minDifficulty;
@@ -19,10 +26,10 @@ public class GamePrediction
     }
 
     // Method to predict the game difficulty
-    public void PredictGameDifficulty(PredictionEngine<HeartRateData, HeartRatePrediction>? predictionEngine, HeartRateData newData)
+    public void PredictGameDifficulty(HeartRateData newData)
     {
         // Predict intensity using the model
-        float predictedIntensity = predictionEngine.Predict(newData).Intensity;
+        float predictedIntensity = _predictionEngine.Predict(newData).Intensity;
 
         // Normalize the predicted intensity to a 0-1 scale
         float normalizedIntensity = (predictedIntensity - _minDifficulty) / (_maxDifficulty - _minDifficulty);

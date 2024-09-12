@@ -67,26 +67,16 @@ var heartRateData = new List<HeartRateData>()
 };
 
 // Game Prediction
-GamePrediction gamePrediction = new GamePrediction(minBpm, maxBpm, minIntensity, maxIntensity);
+GamePrediction gamePrediction = new GamePrediction(predictionEngine, minBpm, maxBpm, minIntensity, maxIntensity);
 foreach (var record in heartRateData)
 {
-    gamePrediction.PredictGameDifficulty(predictionEngine, record);
+    gamePrediction.PredictGameDifficulty(record);
 }
-//
+
 // foreach (var record in heartRateData){
 //     var predictedIntensity = predictionEngine.Predict(record).Intensity;
 //     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
 // }
-
-// Load model from zip
-var transformer = MLExtensions.GetMLContext(ref context, modelFileName);
-if (transformer != null){
-    Console.WriteLine("Model loaded successfully");
-}
-
-// Predict with loaded model from extension method
-var predictionEngine2 = MLExtensions.Predict(context, transformer, new HeartRateData(){Bpm = 120, Time = new TimeSpan(0,0,1,30)});
-Console.WriteLine($"Predicted Intensity: {predictionEngine2}");
 
 // test prediction with input
 string input = null;
@@ -94,6 +84,6 @@ do{
     input = Console.ReadLine();
     var bpm = float.Parse(input);
     var time = new TimeSpan(0,0,1,30);
-    gamePrediction.PredictGameDifficulty(predictionEngine, new HeartRateData() { Bpm = bpm, Time = time });
+    gamePrediction.PredictGameDifficulty(new HeartRateData() { Bpm = bpm, Time = time });
 } while (input != "exit");
 
