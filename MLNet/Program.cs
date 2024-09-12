@@ -66,17 +66,17 @@ var heartRateData = new List<HeartRateData>()
     new HeartRateData { Bpm = 120, Time = new TimeSpan(0, 0, 0, 5) },
 };
 
+// foreach (var record in heartRateData){
+//     var predictedIntensity = predictionEngine.Predict(record).Intensity;
+//     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
+// }
+
 // Game Prediction
 GamePrediction gamePrediction = new GamePrediction(predictionEngine, minBpm, maxBpm, minIntensity, maxIntensity);
 foreach (var record in heartRateData)
 {
     gamePrediction.PredictGameDifficulty(record);
 }
-
-// foreach (var record in heartRateData){
-//     var predictedIntensity = predictionEngine.Predict(record).Intensity;
-//     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
-// }
 
 // test prediction with input
 string input = null;
@@ -87,3 +87,4 @@ do{
     gamePrediction.PredictGameDifficulty(new HeartRateData() { Bpm = bpm, Time = time });
 } while (input != "exit");
 
+DataStatistics.DisplayPlayerDataStatistics(playtestData);
