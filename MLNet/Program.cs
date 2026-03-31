@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Reflection;
+// See https://aka.ms/new-console-template for more information
 using Microsoft.ML;
 using MLNet;
 
@@ -7,11 +6,11 @@ Console.WriteLine("Hello, World!");
 
 var featureColumnName = "Features";
 var labelColumnName = "Intensity";
-var inputColumnNames = typeof(HeartRateData)
-    .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-    .Where(prop => prop.PropertyType == typeof(float))
-    .Select(prop => prop.Name)
-    .ToArray();
+var inputColumnNames = new[]
+{
+    nameof(HeartRateData.Bpm),
+    nameof(HeartRateData.TimeInSeconds)
+};
 var modelFileName = "model.zip";
 var context = new MLContext();
 
@@ -22,7 +21,6 @@ testData.AddRange(playtestData);
 
 var maxBpm = testData.Max(x => x.Bpm);
 var minBpm = testData.Min(x => x.Bpm);
-//var maxIntensity = testData.Max(x => x.Intensity);
 var maxIntensity = 100;
 var minIntensity = testData.Min(x => x.Intensity);
 
@@ -34,16 +32,16 @@ var split = context.Data.TrainTestSplit(gameDataView, testFraction: 0.2);
 
 // Build and train model
 var pipeline = context.Transforms.Concatenate(featureColumnName, inputColumnNames)
-    //.Append(context.Transforms.NormalizeMinMax(featureColumnName)) // Feature scaling
-    .Append(context.Regression.Trainers.FastTree(labelColumnName: labelColumnName)); // Using a more complex model
-var model = pipeline.Fit(gameDataView);
+    .Append(context.Transforms.NormalizeMinMax(featureColumnName))
+    .Append(context.Regression.Trainers.FastTree(labelColumnName: labelColumnName, featureColumnName: featureColumnName));
+var model = pipeline.Fit(split.TrainSet);
 
 // Evaluate model
-var predictions = model.Transform(gameDataView);
+var predictions = model.Transform(split.TestSet);
 var metrics = context.Regression.Evaluate(predictions, labelColumnName: labelColumnName);
 
 // write model to zip
-context.Model.Save(model, gameDataView.Schema, modelFileName);
+context.Model.Save(model, split.TrainSet.Schema, modelFileName);
 
 // Model metrics
 Console.WriteLine($"R^2: {metrics.RSquared}");
@@ -57,7 +55,6 @@ Console.WriteLine($"Predicted Intensity: {prediction.Intensity}");
 // Random Heart rate data
 var heartRateData = new List<HeartRateData>()
 {
-    // random heart rate data
     new HeartRateData { Bpm = 140, Time = new TimeSpan(0, 0, 1, 30) },
     new HeartRateData { Bpm = 120, Time = new TimeSpan(0, 0, 1, 30) },
     new HeartRateData { Bpm = 100, Time = new TimeSpan(0, 0, 1, 30) },
@@ -66,25 +63,24 @@ var heartRateData = new List<HeartRateData>()
     new HeartRateData { Bpm = 120, Time = new TimeSpan(0, 0, 0, 5) },
 };
 
-// foreach (var record in heartRateData){
-//     var predictedIntensity = predictionEngine.Predict(record).Intensity;
-//     Console.WriteLine($"BPM Data: {record.Bpm}, Time: {record.Time}, Predicted Intensity: {predictedIntensity}");
-// }
-
-// Game Prediction
 GamePrediction gamePrediction = new GamePrediction(predictionEngine, minBpm, maxBpm, minIntensity, maxIntensity);
 foreach (var record in heartRateData)
 {
     gamePrediction.PredictGameDifficulty(record);
 }
 
-// test prediction with input
 string input = null;
-do{
+do
+{
     input = Console.ReadLine();
+    if (input == "exit")
+    {
+        break;
+    }
+
     var bpm = float.Parse(input);
     var time = new TimeSpan(0,0,1,30);
     gamePrediction.PredictGameDifficulty(new HeartRateData() { Bpm = bpm, Time = time });
-} while (input != "exit");
+} while (true);
 
 DataStatistics.DisplayPlayerDataStatistics(playtestData);
